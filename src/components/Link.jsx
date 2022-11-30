@@ -14,6 +14,7 @@ function Link({ active, children, onClick }) {
         e.preventDefault();
         onClick();
       }}
+      color="warning"
       style={{ textDecoration: 'underlined' }}
     >
       {children}
