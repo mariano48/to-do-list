@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from '@mui/material';
 
 function Link({ active, children, onClick }) {
   if (active) {
@@ -7,15 +8,17 @@ function Link({ active, children, onClick }) {
   }
 
   return (
-    <button
+    <Button
       type="button"
       onClick={(e) => {
         e.preventDefault();
         onClick();
       }}
+      color="warning"
+      style={{ textDecoration: 'underlined' }}
     >
       {children}
-    </button>
+    </Button>
   );
 }
 

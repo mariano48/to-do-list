@@ -3,15 +3,19 @@ import FilterLink from './containers/FilterLink';
 
 function Footer() {
   return (
-    <p>
-      Show:
-      {' '}
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
       <FilterLink filter="SHOW_ALL">Todos</FilterLink>
       {', '}
       <FilterLink filter="SHOW_ACTIVE">Doing</FilterLink>
       {', '}
       <FilterLink filter="SHOW_COMPLETED">Completed</FilterLink>
-    </p>
+    </div>
   );
 }
 
