@@ -1,16 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ListItem } from '@mui/material';
+import './styles/styles.css';
 
 function Todo({ onClick, completed, text }) {
   return (
-    <li
+    <ListItem
       onClick={onClick}
       style={{
         textDecoration: completed ? 'line-through' : 'none'
       }}
+      className="ListItem"
     >
+      <span className="material-symbols-outlined">done</span>
       {text}
-    </li>
+    </ListItem>
   );
 }
 

@@ -2,15 +2,14 @@ import { Button, Input } from '@mui/material';
 import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../../redux/actions';
+import '../styles/styles.css';
 
 function AddTodo({ dispatch }) {
   let input;
 
   return (
-    <div
-      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-    >
-      <h1>Add new to-do:</h1>
+    <div className="AddTodoContainer">
+      <h1 className="AddToDoTitle">Add new to-do:</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -22,7 +21,8 @@ function AddTodo({ dispatch }) {
         }}
       >
         <Input
-          ref={(node) => {
+          id="input"
+          inputRef={(node) => {
             input = node;
           }}
         />

@@ -1,0 +1,13 @@
+.App {
+  height: 800px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.visibleTodoList {
+  margin-top: 20px;
+}

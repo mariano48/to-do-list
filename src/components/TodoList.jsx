@@ -1,14 +1,15 @@
 import React from 'react';
+import { List } from '@mui/material';
 import PropTypes from 'prop-types';
 import Todo from './Todo';
 
 function TodoList({ todos, onTodoClick }) {
   return (
-    <ul>
+    <List>
       {todos.map((todo) => (
         <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />
       ))}
-    </ul>
+    </List>
   );
 }
 

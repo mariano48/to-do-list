@@ -4,7 +4,11 @@ import { Button } from '@mui/material';
 
 function Link({ active, children, onClick }) {
   if (active) {
-    return <span>{children}</span>;
+    return (
+      <Button color="success" disabled={active}>
+        {children}
+      </Button>
+    );
   }
 
   return (
@@ -14,7 +18,7 @@ function Link({ active, children, onClick }) {
         e.preventDefault();
         onClick();
       }}
-      color="warning"
+      color="success"
       style={{ textDecoration: 'underlined' }}
     >
       {children}
