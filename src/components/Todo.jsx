@@ -11,6 +11,7 @@ function Todo({ onClick, completed, text }) {
         textDecoration: completed ? 'line-through' : 'none'
       }}
       className="ListItem"
+      id={text}
     >
       <span className="material-symbols-outlined">done</span>
       {text}
